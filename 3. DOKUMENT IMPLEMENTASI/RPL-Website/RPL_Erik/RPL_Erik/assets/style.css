@@ -1,0 +1,358 @@
+/*
+| ----------------------------
+|   General
+| ----------------------------
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0F0F0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+/*
+| ----------------------------
+|   Header
+| ----------------------------
+*/
+
+#sidebar {
+    background: #2C3E4E;
+    padding: 20px 0;
+    width: 15%;
+    max-width: 300px;
+    z-index: 99;
+
+}
+
+/* Logo Section */
+#sidebar .logo {
+    align-items: center;
+    display: flex;
+    padding-bottom: 10px;
+}
+#sidebar .logo > h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    display: inline-block;
+    margin-left: 15px;
+}
+#sidebar .logo > .image-wrapper {
+    min-width: 30px;
+    min-height: 30px;
+    background: #fff;
+    display: inline-block;
+}
+
+/* Account Section */
+.account {
+    text-decoration: none;
+    background-color : #1A2226;
+    padding: 5px 25px;
+    display: block;
+    color: #fff;
+}
+
+.account .user-img{
+    float: left;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+.account .detail-account {
+    display: flex;
+    flex-direction: column;
+}
+.account .detail-account span {
+    font-size: 14px;
+}
+.account .detail-account span:last-child {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+/* Menu Sidebar */
+.menu-sidebar {
+    padding: 10px 0;
+    list-style: none;
+}
+.menu-sidebar > .menu,
+.menu-sidebar > .menu > li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu Pinggir Active */
+.menu-sidebar > .menu > .dashboard > a{
+    background-color: #1A2226;
+}
+/* END Menu Pinggir Active */
+
+.menu-sidebar > .menu > li > a {
+    padding: 15px 20px;
+    background: #2C3E4E;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 2px;
+}
+
+.menu-sidebar > .menu > li > a:hover {
+    background-color: #1A2226;
+}
+/*
+| ----------------------------
+|   Content
+| ----------------------------
+*/
+
+/* Content Header */
+#content {
+    width: 95%;
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+#content .header {
+    background: #FFFFFF;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 8px 50px;
+    border-bottom: 3px solid #d8d8d8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 60px 0 rgba(0, 0, 0, 0.0);
+}
+
+
+#content .header > .row {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+#content .header .currentPage{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 20px;
+}
+#content .header .currentPage > h2 {
+    color: #010101;
+    font-size: 20px;
+    height: 100%;
+    margin: 0 20px;
+}
+#content .menu-wrap {
+    width: 70%;
+}
+#content .menu-wrap > .menu {
+    list-style: none;
+    float: right;
+}
+#content .menu-wrap > .menu > li {
+    display: inline-block;
+    margin: 0 20px;
+}
+#content .menu-wrap > .menu > li > a {
+    color: #010101;
+}
+
+/* Main Content */
+.main-content {
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.wrapper-announcement,
+.wrapper-profiles{
+    padding: 0;
+    margin: 0;  
+    justify-content: center;
+    display: flex;
+}
+
+.announcement{
+    background-color: #D4584D;
+    width: 300px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 8px 0;
+    color: #FFFFFF;
+}
+
+.announcement-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.announcement i.fas{
+    font-size: 45px;
+}
+
+.keterangan{
+    margin-left: 10px;
+    display: flex;
+    flex-direction:column;
+    text-align: left;
+}
+
+.keterangan > .count{
+    font-size: 25px;
+    float: left;
+    font-weight: 600;
+}
+
+.keterangan > .status{
+    font-size: 25px;
+    float: left;
+}
+
+.keterangan > .status-cuti{
+    font-size: 20px;
+}
+
+.row-dashboard{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    background-color: #DFE6ED;
+    margin: 20px 10px 0;
+}
+
+
+.profiles > .image-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 120px;
+    color: #2C88D9;
+}
+
+.profiles > .border{
+    border-top: 2px solid #AFBCC8;
+    margin-top: 20px;
+} 
+
+.profiles > .details {
+    display: flex;
+    flex-direction: row; /* Flex agar content berada di bawah */
+    padding: 0px 40px;
+    padding-top: 10px;
+}
+
+.profiles > .details > .details-label{
+    font-weight: 800;
+    text-align: left;
+    width: 100%; 
+}
+
+.profiles > .details > .details-value{
+    text-align: left;
+    width: 100%;     
+}
+
+.profiles > .username, .nip{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: #293845;
+}
+
+.profiles > .nip{
+    color: #303F4C;
+}
+
+
+
+
+/* Pengumuman */
+
+.profiles > .pengumuman-wrap{
+    display: flex;
+    flex-direction: row;
+    color: #1A2226;
+    font-size: 23px;
+    justify-content: center;
+    margin: 20px 0px;
+    align-items: baseline;
+}
+
+.profiles > .pengumuman-wrap > .border-pengumuman{
+    border-bottom: 2px solid;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.pengumuman-wrap .image-wrap{
+    margin-right: 10px;
+}
+.pengumuman-wrap > .text-pengumuman{
+    margin: 0px 40px;
+}
+
+
+/* Button */
+.profiles .edit {
+    background-color: blue;
+    color: #fff;
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 0;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s all;
+}
+.profiles .edit:hover {
+    box-shadow: 0px 3px 5px 1px rgba(150,150,150,1);
+}
+
+
+
+
+
+
+/*
+| ----------------------------
+|   Footer
+| ----------------------------
+*/
+.footer {
+    position: fixed;
+    left: 13.6%;
+    bottom: 0;
+    width: 100%;
+    max-width: 1572px;
+    background-color: #FFFFFF;
+    color: ##2C3E4E;
+    text-align: left;
+    padding: 10px 30px;
+    font-weight: 600;
+     border-top: 3px solid #d8d8d8;
+
+}

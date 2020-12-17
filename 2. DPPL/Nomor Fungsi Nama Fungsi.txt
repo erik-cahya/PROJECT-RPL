@@ -1,0 +1,106 @@
+Nomor Fungsi	Nama Fungsi
+FS-1.1	    Validasi pengguna
+FS-1.1.1	Validasi pengguna user pegawai
+FS-1.1.2	Menampilkan output ketika validasi berhasil / gagal
+FS-1.2.1	Validasi pengguna user Admin
+FS-1.2.2	Menampilkan output ketika validasi berhasi / gagal
+FS-2.1	    Penginputan data absensi pegawai
+FS-2.2	    Output notifikasi absensi berhasil / gagal
+FS-3.1	    Menghitung keterlambatan data absensi dengan waktu yang ditentukan
+FS-3.2	    Input data absensi ke datastore
+FS-4.1	    Penginputan data cuti pegawai ke data store
+FS-4.2	    Output notifikasi pengajuan cuti 
+FS-5.1	    User admin melakukan request data cuti & absensi ke data store untuk di download/rekap
+FS-5.1.1	User admin melakukan request data cuti ke data store TCuti 
+FS-5.1.2	System mengembalikan data berupa data cuti yang direquest oleh user admin untuk kemudian dapat di download
+FS-5.2.1	User admin melakukan request data absensi ke data store TAbsensi
+FS-5.2.2	System mengembalikkan data berupa data absensi yang direquest oleh user admin untuk kemudian dapat di download
+FS-5.2	    System memberikan data sesuai yang di request oleh user admin untuk di download
+FS-6.1	    Mengelola data user (menambah, mengedit, menghapus) pegawai
+FS-7.1	    Menampilkan data user pegawai dari data store user
+
+FS-1.0 KANTORKU	Mampu membedakan tiap level user
+FS-1.1 KANTORKU	System dapat melakukan login
+FS-1.2 KANTORKU	Dapat mendaftarkan user untuk login
+FS-2.0 KANTORKU	System dapat mencari data user
+FS-2.1 KANTORKU	System dapat menghapus data user
+FS-2.2 KANTORKU	System dapat menampilkan data user
+FS-2.3 KANTORKU	System dapat mengubah data user
+FS-2.4 KANTORKU	System dapat menginput data user
+FS-2.5 KANTORKU	Sytem dapat mengelompokkan data user
+FS-3.0 KANTORKU	Sytem dapat menampilkan data gaji
+FS-3.0 KANTORKU	System dapat meng-input data gaji
+FS-4.0 KANTORKU	System dapat melakukan report/rekap data
+FS-4.1 KANTORKU	System dapat mencetak report
+FS-4.2 KANTORKU	System dapat mendownload report
+FS-5.0 KANTORKU	Sytem dapat menghitung denda keterlambatan
+FS-5.1 KANTORKU	Sytem dapat menampilkan denda keterlambatan
+FS-6.0 KANTORKU	System dapat mencatat log aktvitas user ketika di dalam system
+FS-7.0 KANTORKU	Sytem dapat membuat & menampilkan pengumuman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ID Query	Deskripsi	Ekspresi Query
+QUE-1	Memvalidasi data pada tabel TUser untuk melakukan login pada system	INSERT * INTO TUser WHERE username = ‘$username’ AND password = ‘password’ AND level_user = ‘level_user’
+QUE-2	Menambahkan data user pengguna baru pada tabel TUser	INSERT INTO TUser VALUES (’nama_user’,’password’,’jenis_kelamin’,’TTL’,’pendidikan_terakhir’,’,jabatan’,’level_user’)
+QUE-3	Mengubah data user pengguna pada tabel TUser	UPDATE TUser SET name = ‘nama_user’, jenis_kelamin = ‘jenis_kelamin’,  pendidikan_terakhir = ‘pendidikan_terakhir’, jabatan = ‘jabatan’
+QUE-4	Menghapus data user pengguna pada table TUser	DELETE FROM TUser WHERE id_user = id_user
+QUE-5	Mencari data user pada kolom pencarian 	SELECT * FROM TUser WHERE name LIKE ‘%nama_user%’ OR jabatan LIKE ‘%jabatan%’ OR email LIKE ‘%email%’
+QUE-6	Menampilkan data nama user pada system	SELECT * FROM TUser WHERE name = nama_user
+QUE-7	Menampilkan data NIP user pada system	SELECT * FROM TUser WHERE nip = NIP
+QUE-8	Menampilkan data jabatan  user pada system	SELECT * FROM TUser WHERE jabatan = jabatan
+QUE-9	Menampilkan data TTL user pada system	SELECT * FROM TUser WHERE TTL = TTL
+QUE-10	Menampilkan data jenis kelamin user pada system	SELECT * FROM TUser WHERE jenis_kelamin = jenis_kelamin
+QUE-11	Menampilkan data pendidikan terakhir user pada system	SELECT * FROM TUser WHERE pendidikan_terakhir = pendidikan_terakhir
+QUE-12	Menampilkan data pengumuman ada system	SELECT * FROM TPengumuman WHERE pengumuman = isi_pengumuman
+QUE-13	Menampilkan banyaknya jumlah pegawai	SELECT COUNT(id_user) FROM TUser
+QUE-14	Menampilkan banyaknya jumlah pengajuan cuti	SELECT COUNT(id_cuti) FROM TCuti
+QUE-15	Menampilkan banyaknya jumlah pegawai yang masuk	SELECT COUNT(id_absensi) FROM TAbsensi
+
+QUE-5, QUE-6, QUE-8, QUE-9, QUE-10, QUE-11, QUE-12, QUE-13, QUE-14, QUE-15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
